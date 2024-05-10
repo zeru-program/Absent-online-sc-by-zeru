@@ -137,9 +137,10 @@ function authLogin() {
       localStorage.setItem('username', usn)
       localStorage.setItem('password', pw)
       localStorage.setItem('school-year', val.school_year)
-        alert('login')
+      location.reload()
       } else {
         alert('username atau password salah')
+        return;
       }
       
     }
