@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Absent Online</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/style.css" type="text/css" media="all" />
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+        <nav class="navbar py-2 bg-light text-dark fixed-top navbar-dark navbar-expand-lg nav-top" style="box-shadow: 5px 0 5px rgba(0,0,0,.5);">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-dark nav-logo-text" href="#">Your brand.</a>
+            <div class="d-flex gap-2">
+            <button class="navbar-toggler bg-info m-0 navbar-top-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border:0 !important;">
+              <i class="bi bi-list display-4" style="border:0 !important; color:white !important;"></i>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav py-2 gap-2">
+                <a onclick="window.location.href = '/home/'" class="nav-link d-flex align-items-center text-dark" aria-current="page" href="#">
+                <i class="bi i-nav bi-house mx-2 text-dark"></i>Home</a>
+                <a onclick="window.location.href = '/absen/'" class="nav-link active nav-active d-flex align-items-center text-dark" aria-current="page" href="#">
+                <i class="bi i-nav bi-book mx-2 text-dark"></i>Absent</a>
+                 <a onclick="window.location.href = '/account/'" class="nav-link d-flex align-items-center text-dark" aria-current="page" href="#">
+              <i class="bi i-nav bi-person mx-2 text-dark"></i>Account</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+<main class="pb-5 d-flex justify-content-center align-items-center" style="padding-top:100px">
+  <form id="postToAbsen" style="width:90%; background:white;box-shadow:0 0 5px rgba(0,0,0,.3);" class="rounded-4 p-4" accept-charset="utf-8">
+    <h1 class="fw-bold w-100 text-center" style="
+    background-image: -webkit-linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Absent</h1>
+    <label for="class">Class:</label>
+    <input type="text" id="class" class="input-absent" placeholder="Class" />
+    <br />
+
+    <label for="teacher">Teacher:</label>
+    <input type="text" id="teacher" class="input-absent" placeholder="Teacher" />
+    <br />
+
+    <label for="date">Date:</label>
+    <input type="date" class="input-absent" id="date" />
+    <br />
+
+    <label for="total_students">Total Students:</label>
+    <input type="number" class="input-absent" id="total_students" placeholder="Total students" />
+    <br />
+
+    <label for="present">Present:</label>
+    <input type="number" class="input-absent" id="present" placeholder="Present" />
+    <br />
+
+    <label for="sick">Sick:</label>
+    <input type="number" class="input-absent" id="sick" placeholder="Sick" />
+    <br />
+
+    <label for="permission">Permission:</label>
+    <input type="number" class="input-absent" id="permission" placeholder="Permission" />
+    <br />
+
+    <label for="cakes">Cakes (Absent):</label>
+    <input type="number" class="input-absent" id="cakes" placeholder="Cakes (Absent)" />
+    <br />
+
+    <label for="sick_students">Sick Students:</label>
+    <input type="text" class="input-absent" id="sick_students" placeholder="Sick students" />
+    <br />
+
+    <label for="permission_students">Permission Students:</label>
+    <input type="text" class="input-absent" id="permission_students" placeholder="Permission students" />
+    <br />
+
+    <label for="cakes_students">Cakes Students:</label>
+    <input type="text" class="input-absent" id="cakes_students" placeholder="Cakes students" />
+    <br />
+
+    <label for="description">Description:</label>
+    <input type="text" class="input-absent" id="description" placeholder="Description" />
+    <br />
+
+    <button class="btn-post-absen" type="submit">Submit</button>
+</form>
+
+</main>
+
+  <!-- this is a modals -->
+  <div class="w-100 position-fixed top-0 vh-100 d-none justify-content-center align-items-center" style="left:0;backdrop-filter: blur(3px);" id="modals-wrong"> 
+    <div class="d-flex text-center fw-bold text-danger p-3 justify-content-center align-items-center bg-light rounded-2 shadow-lg" style="width:300px; height:400px;">
+      One/all of the inputs have not been filled in, please fill them in first.
+    </div>
+  </div>
+  
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../public/main.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

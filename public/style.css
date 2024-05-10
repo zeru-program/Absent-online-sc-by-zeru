@@ -1,0 +1,125 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH");
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+.nav-active {
+  background: rgba(58,201,237,.3);
+  padding-block: 15px;
+  border-radius: 5px;
+}
+@media screen and (min-width: 568px) {
+.nav-active {
+  padding-block: 0 !important;
+}
+.navbar-collapse {
+  position: absolute;
+  right: 30px !important;
+  padding-block: 10px !important;
+}
+#notif-icon-1 {
+  display: none;
+}
+#notif-icon-2 {
+  display: flex !important;
+  margin-right: 10px;
+}
+}
+
+/* home */
+.btn-gradient-c {
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+}
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 15px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.custom-table td {
+  padding-block: 5px !important;
+  padding-left: 5px !important;
+}
+
+.custom-table th {
+  background-color: rgba(58,201,237,1);
+  color: white;
+  font-weight: 800;
+}
+
+.custom-table th:first-child,
+.custom-table td:first-child {
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: rgba(58,201,237,.2);
+}
+/* home end */
+/*** absen start **/ 
+
+/*
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  */
+
+   #postToAbsen {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .input-absent,
+  .btn-post-absen {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .btn-post-absen {
+    background: -webkit-linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+    transition: all .5 ease;
+  }
+
+  .btn-post-absen:hover {
+    transform: scale(.95);
+  }
+/*** absen end **/ 

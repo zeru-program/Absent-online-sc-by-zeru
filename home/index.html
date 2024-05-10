@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Absent Online</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/style.css" type="text/css" media="all" />
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="">
+    <nav class="navbar py-2 bg-light text-dark fixed-top navbar-dark navbar-expand-lg nav-top" style="box-shadow: 5px 0 5px rgba(0,0,0,.5);">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-dark nav-logo-text" href="#">Your brand.</a>
+            <div class="d-flex gap-2">
+            <div onclick="showNotif()" id="notif-icon-1">
+              <i class="bi bi-bell text-info display-1" style=""></i>
+            </div>
+            <button class="navbar-toggler bg-info m-0 navbar-top-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border:0 !important;">
+              <i class="bi bi-list display-4" style="border:0 !important; color:white !important;"></i>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav py-2 gap-2">
+            <div onclick="showNotif()" id="notif-icon-2" style="display:none;">
+              <i class="bi bi-bell text-info display-6" style=""></i>
+            </div>
+                <a onclick="window.location.href = '/home/'" class="nav-link active nav-active d-flex align-items-center text-dark" aria-current="page" href="#">
+                <i class="bi i-nav bi-house mx-2 text-dark"></i>Home</a>
+                <a onclick="window.location.href = '/absen/'" class="nav-link d-flex align-items-center text-dark" aria-current="page" href="#">
+                <i class="bi i-nav bi-book mx-2 text-dark"></i>Absent</a>
+                 <a onclick="window.location.href = '/account/'" class="nav-link d-flex align-items-center text-dark" aria-current="page" href="#">
+              <i class="bi i-nav bi-person mx-2 text-dark"></i>Account</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+  <main class="w-100 pb-5 m-0" style="margin-top:50px !important">
+    <div class="d-flex w-100 flex-column">
+      <div class="d-flex w-100 flex-column justify-content-center align-items-center text-center" style="height: 250px;">
+        <button type="button" class="border-0 text-light fw-bold py-3 w-50 btn-gradient-c" onclick="window.location.href = '/absen/'">LET'S ABSENT</button>
+        <p class="m-0 px-5 pt-1">For your class attendance, please click the <br>button "LET'S ABSENT", and then fill in the data correctly.</p>
+      </div>
+      <div class="w-100 d-flex justify-content-center align-items-center">
+      <div class="rounded-4 p-2" style="background:white;box-shadow:0 0 5px rgba(0,0,0,.2);width:95%;">
+        <div style="overflow: auto;" class="m-1">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th class="text-left" style="border-right:3px solid white;">No</th>
+            <th class="text-left" style="border-right:3px solid white;">Class</th>
+            <th class="text-left" style="border-right:3px solid white;">Homeroom Teacher</th>
+            <th class="text-left" style="border-right:3px solid white;">Date</th>
+            <th class="text-left" style="border-right:3px solid white;">Total Students</th>
+            <th class="text-left" style="border-right:3px solid white;">Present</th>
+            <th class="text-left" style="border-right:3px solid white;">Sick</th>
+            <th class="text-left" style="border-right:3px solid white;">Excused</th>
+            <th class="text-left" style="border-right:3px solid white;">Cakes</th>
+            <th class="text-left" style="border-right:3px solid white;">Students Sick</th>
+            <th class="text-left" style="border-right:3px solid white;">Students Excused</th>
+            <th class="text-left" style="border-right:3px solid white;">Students Cakes</th>
+            <th class="text-left" style="border-right:3px solid white;">Note</th>
+          </tr>
+        </thead>
+        <tbody id="absen-body-home">
+          <!-- You can add more rows here with different data -->
+        </tbody>
+      </table>
+        </div>
+      </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- this a popup for login user -->
+  <div class="position-fixed top-0 w-100 vh-100 d-flex justify-content-center align-items-center" style="backdrop-filter: blur(2px);" id="poppup-login">
+  <div class="bg-light text-dark p-5 rounded shadow-lg" style="width:300px;">
+    <h1 class="text-center mb-4 fw-bold">Login</h1>
+    <form id="formLogin" accept-charset="utf-8">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username/class</label>
+        <input type="text" class="form-control" id="username-acc" name="username" placeholder="Enter your username or class name..">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password-acc" name="password" placeholder="Enter your password">
+      </div>
+      <button type="submit" class="btn btn-info w-100">LOGIN</button>
+      <div class="mt-3 text-center">
+      <p>forgoten for your password or username? <a href="#">contact the owner this site.</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+  <!-- this a popup for notification-->
+  <div class="position-fixed top-0 w-100 gap-3 vh-100 justify-content-center align-items-center" style="backdrop-filter: blur(2px); display:none;margin-top:100px;padding-inline:20px;" id="popup-notif">
+    </div>
+  </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../public/main.js" type="text/javascript" charset="utf-8"></script>
+</div>
+</html>
